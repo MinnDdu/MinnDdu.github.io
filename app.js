@@ -88,7 +88,7 @@ function Nav({ profile, theme, onToggleTheme }) {
     <nav className="nav" aria-label="primary">
       <div className="nav-inner">
         <a href="#" className="nav-brand" onClick={goTop}>
-          <span className="prompt">$</span>MinSoo
+          <span className="prompt">$</span>{profile?.handle || profile?.name || "MinSoo"}
         </a>
         <div className="nav-links">
           {SECTIONS.map((s) => (
@@ -143,9 +143,9 @@ function Hero({ profile, photoPos }) {
   return (
     <header className="hero" id="about" data-photo={photoPos}>
       <div className="hero-photo">
-        {/* Replace assets/profile.svg with a real photo (e.g. assets/profile.jpg) */}
-        <img src="assets/profile.svg" alt={profile.name} />
-        <span className="photo-tag">~/photo.jpg</span>
+        {/* Profile photo */}
+        <img src={profile.image || "assets/profile.svg"} alt={profile.name} />
+        <span className="photo-tag">{profile.imageLabel || profile.image || "~/photo"}</span>
       </div>
       <div className="hero-main">
         <h1>{profile.name}<span className="h1-cursor" aria-hidden="true" /></h1>
@@ -421,7 +421,7 @@ function Contact({ profile }) {
 }
 
 /* ---------- Help modal (?) ---------- */
-function HelpModal({ open, onClose }) {
+function HelpModal({ open, onClose, profile }) {
   useEffect(() => {
     if (!open) return;
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -444,7 +444,7 @@ function HelpModal({ open, onClose }) {
     <div className="help-backdrop" onClick={onClose}>
       <div className="help-modal" onClick={(e) => e.stopPropagation()}>
         <div className="help-head">
-          <span className="prompt">$</span> man MinSoo
+          <span className="prompt">$</span> man {profile?.handle || profile?.name || "MinSoo"}
           <button className="help-close" onClick={onClose} aria-label="Close">×</button>
         </div>
         <div className="help-body">
@@ -463,10 +463,10 @@ function HelpModal({ open, onClose }) {
 }
 
 /* ---------- Footer ---------- */
-function Footer({ onHelp }) {
+function Footer({ profile, onHelp }) {
   return (
     <footer className="foot">
-      <span>© {new Date().getFullYear()} Min Soo Kim — built with html, css, a little js</span>
+      <span>© {new Date().getFullYear()} {profile?.name || "Min Soo Kim"} — built with html, css, a little js</span>
       <span className="kbhint">
         <button className="kbd-btn" onClick={onHelp} title="Show shortcuts (?)">
           press <span className="kbd">?</span> for shortcuts
@@ -573,9 +573,9 @@ function App() {
         <AwardsList     items={awards} />
         <MiscList       items={misc} />
         <Contact        profile={profile} />
-        <Footer onHelp={() => setHelp(true)} />
+        <Footer profile={profile} onHelp={() => setHelp(true)} />
       </main>
-      <HelpModal open={help} onClose={() => setHelp(false)} />
+      <HelpModal open={help} onClose={() => setHelp(false)} profile={profile} />
       <TweaksRoot theme={theme} setTheme={setTheme} photoPos={photoPos} setPhotoPos={setPhotoPos} />
     </>
   );

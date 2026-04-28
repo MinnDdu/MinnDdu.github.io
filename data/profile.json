@@ -3,11 +3,15 @@
   "handle": "minsoo",
   "affiliation": "Yonsei University · AI",
   "role": "Graduate Student",
-  "interests": ["NLP", "Multimodal", "AI Safety"],
+  "interests": [
+    "NLP",
+    "Multimodal",
+    "AI Safety"
+  ],
   "location": "Seoul, South Korea",
   "email": "markkim1@yonsei.ac.kr",
   "tagline": "Building safer, more grounded language and multimodal models.",
-  "bio": "I am a graduate student at Yonsei University, working on `natural language processing`, `multimodal learning`, and `AI safety`. My research focuses on understanding and mitigating failure modes of large language and vision-language models — including hallucination, jailbreaks, and distribution shift — and on designing evaluation protocols that hold up under adversarial use.",
+  "bio": "I am a graduate student at Yonsei University, advised by Prof. Albert No in AI-ISL. I work on `natural language processing`, `multimodal learning`, and `AI safety`. My research focuses on understanding where large language and vision-language models fail — from hallucination and jailbreaks to distribution shift — and on designing evaluation protocols that remain reliable under adversarial use. More broadly, I am interested in building AI systems that are not only capable, but also robust, interpretable, and trustworthy in real-world settings.",
   "currently": [
     "Studying alignment of multimodal LLMs under distribution shift",
     "Building red-teaming tools for VLMs",
@@ -16,8 +20,10 @@
   "links": {
     "email": "mailto:markkim1@yonsei.ac.kr",
     "github": "https://github.com/MinnDdu",
-    "scholar": "https://scholar.google.com/citations?user=xxxx",
-    "x": "https://x.com/minsoo",
+    "scholar": "https://scholar.google.com/citations?user=Og3gN_AAAAAJ&hl",
+    "x": "https://x.com/minsooway",
     "cv": "cv.pdf"
-  }
+  },
+  "image": "assets/profile.png",
+  "imageLabel": "~/photo.png"
 }

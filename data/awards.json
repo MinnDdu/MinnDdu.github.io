@@ -1,26 +1,44 @@
 [
   {
-    "title": "Presidential Science Scholarship",
-    "issuer": "Korea Student Aid Foundation (KOSAF)",
-    "year": "2024 — 2026",
-    "note": "Full tuition + monthly stipend, top 0.5% of national applicants."
-  },
-  {
-    "title": "NeurIPS 2025 Spotlight",
-    "issuer": "NeurIPS Program Committee",
-    "year": "2025",
-    "note": "Top ~3% of accepted papers."
-  },
-  {
-    "title": "Outstanding Undergraduate Thesis Award",
-    "issuer": "Yonsei University, College of Engineering",
+    "title": "Encouragement Award, Spring 2024 Semester",
+    "issuer": "Stony Brook University",
     "year": "2024",
-    "note": "Awarded to one student per department."
+    "note": "$1000 Merit-based Scholarship"
   },
   {
-    "title": "AI Frontier Scholarship",
-    "issuer": "Yonsei AI Institute",
+    "title": "Academic Prestige, Fall 2023 Semester",
+    "issuer": "Stony Brook University",
     "year": "2023",
-    "note": "Selected as one of 10 undergraduate AI fellows."
+    "note": "$6715 Merit-based Scholarship"
+  },
+  {
+    "title": "Encouragement Award, Spring 2023 Semester",
+    "issuer": "Stony Brook University",
+    "year": "2023",
+    "note": "$1000 Merit-based Scholarship"
+  },
+  {
+    "title": "Academic Achievement, Fall 2022 Semester",
+    "issuer": "Stony Brook University",
+    "year": "2022",
+    "note": "$2000 Merit-based Scholarship"
+  },
+  {
+    "title": "Academic Achievement, Spring 2022 Semester",
+    "issuer": "Stony Brook University",
+    "year": "2022",
+    "note": "$2000 Merit-based Scholarship"
+  },
+  {
+    "title": "Dean's Scholarship, Fall 2021 Semester",
+    "issuer": "Stony Brook University",
+    "year": "2021",
+    "note": "$3000 Merit-based Scholarship"
+  },
+  {
+    "title": "Encouragement Award, Spring 2021 Semester",
+    "issuer": "Stony Brook University",
+    "year": "2021",
+    "note": "$1000 Merit-based Scholarship"
   }
 ]

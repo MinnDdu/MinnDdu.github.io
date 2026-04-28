@@ -18,7 +18,7 @@
     "tags": [
       "Under review"
     ],
-    "thumbnail": "assets/wiserui.pdf",
+    "thumbnail": "assets/wiserui.png",
     "links": {
       "paper": "https://arxiv.org/abs/2505.05026"
     },
@@ -41,7 +41,7 @@
     "year": 2025,
     "venueColor": "ghost",
     "tags": [],
-    "thumbnail": "assets/Egospeak Teaser Figure.pdf",
+    "thumbnail": "assets/egospeak-teaser.png",
     "links": {
       "paper": "https://aclanthology.org/2025.findings-naacl.163/"
     },
