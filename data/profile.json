@@ -8,7 +8,7 @@
     "Multimodal",
     "AI Safety"
   ],
-  "location": "Seoul, South Korea",
+  "location": "",
   "email": "markkim1@yonsei.ac.kr",
   "tagline": "Building safer, more grounded language and multimodal models.",
   "bio": "I am a graduate student at Yonsei University, advised by Prof. Albert No in AI-ISL. I work on `natural language processing`, `multimodal learning`, and `AI safety`. My research focuses on understanding where large language and vision-language models fail — from hallucination and jailbreaks to distribution shift — and on designing evaluation protocols that remain reliable under adversarial use. More broadly, I am interested in building AI systems that are not only capable, but also robust, interpretable, and trustworthy in real-world settings.",
