@@ -1,65 +1,50 @@
 [
   {
-    "title": "Latent Drift: Detecting Distribution Shift in Multimodal Language Models",
+    "title": "Do MLLMs Capture How Interfaces Guide User Behavior? A Benchmark for Multimodal UI/UX Design Understanding",
     "authors": [
-      "Min Soo Kim*",
-      "Jane Doe",
-      "Hyun-Woo Park",
-      "Advisor Name"
+      "Jaehyun Jeon",
+      "Min Soo Kim",
+      "Jang Han Yoon",
+      "Sumin Shim",
+      "Yejin Choi",
+      "Hanbin Kim",
+      "Dae Hyun Kim",
+      "Youngjae Yu"
     ],
     "me": "Min Soo Kim",
-    "venue": "NeurIPS",
-    "year": 2025,
+    "venue": "arXiv",
+    "year": 2026,
     "venueColor": "ghost",
     "tags": [
-      "Spotlight"
+      "Under review"
     ],
-    "equalContribution": true,
-    "thumbnail": "assets/pub-1.svg",
+    "thumbnail": "assets/wiserui.pdf",
     "links": {
-      "paper": "#",
-      "code": "#",
-      "project": "#"
+      "paper": "https://arxiv.org/abs/2505.05026"
     },
-    "abstract": "We propose Latent Drift, a lightweight protocol for detecting distribution shift in multimodal language models without access to the test distribution. Our method tracks the geometry of intermediate representations and flags inputs whose latent trajectory deviates from a calibrated reference."
+    "abstract": ""
   },
   {
-    "title": "Refusal Cascades: How Safety Training Propagates Through VLM Modalities",
+    "title": "Egospeak: learning when to speak for egocentric conversational agents in the wild",
     "authors": [
+      "Junhyeok Kim",
       "Min Soo Kim",
-      "Sarah Lee",
-      "Advisor Name"
+      "Jiwan Chung",
+      "Jungbin Cho",
+      "Jisoo Kim",
+      "Sungwoong Kim",
+      "Gyeongbo Sim",
+      "Youngjae Yu"
     ],
     "me": "Min Soo Kim",
-    "venue": "ACL",
+    "venue": "Findings of the Association for Computational Linguistics: NAACL 2025",
     "year": 2025,
     "venueColor": "ghost",
     "tags": [],
-    "thumbnail": "assets/pub-2.svg",
+    "thumbnail": "assets/Egospeak Teaser Figure.pdf",
     "links": {
-      "paper": "#",
-      "code": "#",
-      "bibtex": "#"
+      "paper": "https://aclanthology.org/2025.findings-naacl.163/"
     },
-    "abstract": "We investigate how refusal behavior trained on text propagates to vision-language inputs and identify a class of cross-modal jailbreaks that bypass standard safety filters."
-  },
-  {
-    "title": "Grounded but Wrong: A Taxonomy of Hallucination Modes in Captioning Models",
-    "authors": [
-      "Daehee Choi",
-      "Min Soo Kim",
-      "Advisor Name"
-    ],
-    "me": "Min Soo Kim",
-    "venue": "EMNLP",
-    "year": 2024,
-    "venueColor": "ghost",
-    "tags": [],
-    "thumbnail": "assets/pub-3.svg",
-    "links": {
-      "paper": "#",
-      "code": "#"
-    },
-    "abstract": "A taxonomy of hallucination modes in modern captioning models, with a benchmark covering object, attribute, and relational errors across six datasets."
+    "abstract": ""
   }
 ]
