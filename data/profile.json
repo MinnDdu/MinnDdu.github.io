@@ -1,0 +1,23 @@
+{
+  "name": "Min Soo Kim",
+  "handle": "minsoo",
+  "affiliation": "Yonsei University · AI",
+  "role": "Graduate Student",
+  "interests": ["NLP", "Multimodal", "Safety"],
+  "location": "Seoul, South Korea",
+  "email": "markkim1@yonsei.ac.kr",
+  "tagline": "Building safer, more grounded language and multimodal models.",
+  "bio": "I am a graduate student at Yonsei University, working on `natural language processing`, `multimodal learning`, and `AI safety`. My research focuses on understanding and mitigating failure modes of large language and vision-language models — including hallucination, jailbreaks, and distribution shift — and on designing evaluation protocols that hold up under adversarial use.",
+  "currently": [
+    "Studying alignment of multimodal LLMs under distribution shift",
+    "Building red-teaming tools for VLMs",
+    "Reading: Anthropic's interpretability papers"
+  ],
+  "links": {
+    "email": "mailto:markkim1@yonsei.ac.kr",
+    "github": "https://github.com/MinnDdu",
+    "scholar": "https://scholar.google.com/citations?user=xxxx",
+    "x": "https://x.com/minsoo",
+    "cv": "cv.pdf"
+  }
+}

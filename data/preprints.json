@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Adversarial Prompts as Distribution Shift: A Unified View",
+    "authors": ["Min Soo Kim", "Advisor Name"],
+    "me": "Min Soo Kim",
+    "venue": "arXiv",
+    "year": 2026,
+    "venueColor": "ghost",
+    "tags": ["Under review"],
+    "thumbnail": "assets/pub-4.svg",
+    "links": {
+      "paper": "#",
+      "code": "#"
+    },
+    "abstract": "We argue that adversarial prompts and natural distribution shift can be analyzed within the same statistical framework, and we use this view to design defenses that generalize across both regimes."
+  }
+]

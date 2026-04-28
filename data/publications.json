@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Latent Drift: Detecting Distribution Shift in Multimodal Language Models",
+    "authors": ["Min Soo Kim*", "Jane Doe", "Hyun-Woo Park", "Advisor Name"],
+    "me": "Min Soo Kim",
+    "venue": "NeurIPS",
+    "year": 2025,
+    "venueColor": "ghost",
+    "tags": ["Spotlight"],
+    "equalContribution": true,
+    "thumbnail": "assets/pub-1.svg",
+    "links": {
+      "paper": "#",
+      "code": "#",
+      "project": "#"
+    },
+    "abstract": "We propose Latent Drift, a lightweight protocol for detecting distribution shift in multimodal language models without access to the test distribution. Our method tracks the geometry of intermediate representations and flags inputs whose latent trajectory deviates from a calibrated reference."
+  },
+  {
+    "title": "Refusal Cascades: How Safety Training Propagates Through VLM Modalities",
+    "authors": ["Min Soo Kim", "Sarah Lee", "Advisor Name"],
+    "me": "Min Soo Kim",
+    "venue": "ACL",
+    "year": 2025,
+    "venueColor": "ghost",
+    "tags": [],
+    "thumbnail": "assets/pub-2.svg",
+    "links": {
+      "paper": "#",
+      "code": "#",
+      "bibtex": "#"
+    },
+    "abstract": "We investigate how refusal behavior trained on text propagates to vision-language inputs and identify a class of cross-modal jailbreaks that bypass standard safety filters."
+  },
+  {
+    "title": "Grounded but Wrong: A Taxonomy of Hallucination Modes in Captioning Models",
+    "authors": ["Daehee Choi", "Min Soo Kim", "Advisor Name"],
+    "me": "Min Soo Kim",
+    "venue": "EMNLP",
+    "year": 2024,
+    "venueColor": "ghost",
+    "tags": [],
+    "thumbnail": "assets/pub-3.svg",
+    "links": {
+      "paper": "#",
+      "code": "#"
+    },
+    "abstract": "A taxonomy of hallucination modes in modern captioning models, with a benchmark covering object, attribute, and relational errors across six datasets."
+  }
+]

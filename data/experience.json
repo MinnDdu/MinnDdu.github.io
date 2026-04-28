@@ -1,0 +1,26 @@
+[
+  {
+    "role": "Research Intern",
+    "org": "NAVER AI Lab",
+    "team": "Foundation Models",
+    "start": "Jun 2025",
+    "end": "Aug 2025",
+    "summary": "Worked on calibration of multimodal LLMs under distribution shift; contributed to an internal red-teaming toolkit."
+  },
+  {
+    "role": "Research Assistant",
+    "org": "Trustworthy AI Lab, Yonsei",
+    "team": "Advisor: Prof. Advisor Name",
+    "start": "Mar 2023",
+    "end": "Present",
+    "summary": "Lead author on three publications. Mentor for two undergraduate research students."
+  },
+  {
+    "role": "Software Engineering Intern",
+    "org": "Kakao Brain",
+    "team": "Vision Team",
+    "start": "Jul 2022",
+    "end": "Sep 2022",
+    "summary": "Built a data pipeline for large-scale image-text pair filtering; reduced training-set noise by 14%."
+  }
+]

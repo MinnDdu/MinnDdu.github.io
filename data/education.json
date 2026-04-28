@@ -1,0 +1,20 @@
+[
+  {
+    "degree": "Ph.D. in Artificial Intelligence",
+    "school": "Yonsei University",
+    "lab": "Trustworthy AI Lab",
+    "advisor": "Prof. Advisor Name",
+    "start": "2024",
+    "end": "Present",
+    "location": "Seoul, KR"
+  },
+  {
+    "degree": "B.S. in Computer Science",
+    "school": "Yonsei University",
+    "gpa": "4.12 / 4.30",
+    "honors": "Summa Cum Laude",
+    "start": "2020",
+    "end": "2024",
+    "location": "Seoul, KR"
+  }
+]

@@ -1,0 +1,12 @@
+Replace this placeholder with your actual CV.
+
+How to:
+1. Export your CV as PDF (e.g., from LaTeX, Word, or Google Docs).
+2. Rename it to: cv.pdf
+3. Place it at the project root (next to index.html), OR keep it under assets/ and update data/profile.json:
+
+   "links": {
+     "cv": "assets/cv.pdf"
+   }
+
+4. Delete this placeholder file.
