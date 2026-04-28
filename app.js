@@ -145,7 +145,6 @@ function Hero({ profile, photoPos }) {
       <div className="hero-photo">
         {/* Profile photo */}
         <img src={profile.image || "assets/profile.svg"} alt={profile.name} />
-        <span className="photo-tag">{profile.imageLabel || profile.image || "~/photo"}</span>
       </div>
       <div className="hero-main">
         <h1>{profile.name}<span className="h1-cursor" aria-hidden="true" /></h1>

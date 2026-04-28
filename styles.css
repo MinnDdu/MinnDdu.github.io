@@ -189,13 +189,13 @@ img { max-width: 100%; display: block; }
   padding-top: 56px;
   padding-bottom: 16px;
   display: grid;
-  grid-template-columns: 1fr 220px;
+  grid-template-columns: 1fr 250px;
   grid-template-rows: auto auto;
   gap: 20px 40px;
   align-items: start;
 }
 .hero[data-photo="left"] {
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 250px 1fr;
 }
 .hero[data-photo="left"] .hero-photo { order: -1; }
 /* Reorder for default (right photo) since DOM has photo first now */
@@ -339,7 +339,7 @@ img { max-width: 100%; display: block; }
   background: var(--bg-sunken);
   aspect-ratio: 1 / 1;
   position: relative;
-  width: 220px;
+  width: 250px;
   justify-self: end;
 }
 .hero[data-photo="left"] .hero-photo { justify-self: start; }
@@ -514,9 +514,7 @@ img { max-width: 100%; display: block; }
   background: var(--bg-sunken);
   aspect-ratio: 16 / 10;
 }
-[data-theme="dark"] .pub-thumb img,
-[data-theme="dark"] .hero-photo img { filter: invert(0.88) hue-rotate(180deg); }
-.pub-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pub-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
 .pub-body { min-width: 0; }
 .pub-tags {
   display: flex;
@@ -781,7 +779,7 @@ img { max-width: 100%; display: block; }
     padding-bottom: 32px;
   }
   .hero-photo {
-    width: 132px;
+    width: 156px;
     aspect-ratio: 1/1;
     order: -1;
     justify-self: start;

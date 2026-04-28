@@ -24,6 +24,5 @@
     "x": "https://x.com/minsooway",
     "cv": "cv.pdf"
   },
-  "image": "assets/profile.png",
-  "imageLabel": "~/photo.png"
+  "image": "assets/profile.png"
 }

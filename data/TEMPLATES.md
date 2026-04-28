@@ -9,7 +9,7 @@ python3 -m json.tool data/profile.json
 python3 -m json.tool data/publications.json
 ```
 
-For paper entries, `thumbnail` must point to an image file such as `.png`, `.jpg`, `.webp`, or `.svg`. Do not use PDF as a thumbnail. Put PDF or paper URLs under `links.paper`.
+For paper entries, `thumbnail` must point to an image file such as `.png`, `.jpg`, `.webp`, or `.svg`. Do not use PDF as a thumbnail. Put PDF or paper URLs under `links.paper`. Thumbnails are displayed with `object-fit: contain`, so different aspect ratios will be shown without cropping; around 16:9 to 2.5:1 works best.
 
 ## `profile.json`
 
