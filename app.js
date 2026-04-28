@@ -244,7 +244,7 @@ function PubItem({ p }) {
   const [open, setOpen] = useState(false);
   return (
     <article className="pub">
-      <div className={"pub-thumb" + (p.thumbnailFit === "contain" ? " contain" : "")}><img src={p.thumbnail} alt="" /></div>
+      <div className="pub-thumb"><img src={p.thumbnail} alt="" /></div>
       <div className="pub-body">
         <div className="pub-tags">
           <span className={"tag " + venueColorClass(p.venueColor)}>{p.venue} {p.year}</span>

@@ -9,7 +9,7 @@ python3 -m json.tool data/profile.json
 python3 -m json.tool data/publications.json
 ```
 
-For paper entries, `thumbnail` must point to an image file such as `.png`, `.jpg`, `.webp`, or `.svg`. Do not use PDF as a thumbnail. Put PDF or paper URLs under `links.paper`. Thumbnails use `object-fit: cover` by default, so they fill the thumbnail box. If a wide teaser gets cropped, add `"thumbnailFit": "contain"` to that paper entry.
+For paper entries, `thumbnail` must point to an image file such as `.png`, `.jpg`, `.webp`, or `.svg`. Do not use PDF as a thumbnail. Put PDF or paper URLs under `links.paper`. Thumbnails are displayed width-first inside a fixed thumbnail box, so the full image width is visible without cropping. Very wide or short images may show some vertical padding.
 
 Inline markdown works in visible text fields across the site: use `` `keyword` `` for mono-highlight, `**bold**`, `*italic*`, and `[label](https://example.com)`.
 
@@ -69,7 +69,6 @@ Array of published or accepted papers.
     "tags": ["Oral", "Best Paper"],
     "equalContribution": false,
     "thumbnail": "assets/paper-thumbnail.png",
-    "thumbnailFit": "cover",
     "links": {
       "paper": "https://example.com/paper.pdf",
       "code": "https://github.com/user/repo",
@@ -87,7 +86,6 @@ Notes:
 - `links` keys are optional. Omit missing links.
 - Use `tags: []` if there are no tags.
 - `equalContribution` is optional; omit it unless needed.
-- `thumbnailFit` is optional. Omit it for the default cropped/fill look, or set it to `"contain"` for wide teaser images.
 
 ## `preprints.json`
 
