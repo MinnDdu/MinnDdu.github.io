@@ -4,23 +4,7 @@
     "value": "Wave to Earth on repeat — \"seasons\" got me through paper deadlines."
   },
   {
-    "label": "coffee",
-    "value": "Single-origin filter > espresso. Currently obsessed with Ethiopian Yirgacheffe."
-  },
-  {
-    "label": "non-research reading",
-    "value": "Murakami's short stories, anything by Ted Chiang."
-  },
-  {
     "label": "hobbies",
     "value": "Bouldering (V4 grade, slowly inching toward V5), film photography on a Pentax MX."
-  },
-  {
-    "label": "dev setup",
-    "value": "Neovim + tmux on macOS. Catppuccin Mocha everywhere. JetBrains Mono."
-  },
-  {
-    "label": "fun fact",
-    "value": "I once tried to fine-tune a model on my own handwriting. It did not go well."
   }
 ]

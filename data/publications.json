@@ -1,12 +1,19 @@
 [
   {
     "title": "Latent Drift: Detecting Distribution Shift in Multimodal Language Models",
-    "authors": ["Min Soo Kim*", "Jane Doe", "Hyun-Woo Park", "Advisor Name"],
+    "authors": [
+      "Min Soo Kim*",
+      "Jane Doe",
+      "Hyun-Woo Park",
+      "Advisor Name"
+    ],
     "me": "Min Soo Kim",
     "venue": "NeurIPS",
     "year": 2025,
     "venueColor": "ghost",
-    "tags": ["Spotlight"],
+    "tags": [
+      "Spotlight"
+    ],
     "equalContribution": true,
     "thumbnail": "assets/pub-1.svg",
     "links": {
@@ -18,7 +25,11 @@
   },
   {
     "title": "Refusal Cascades: How Safety Training Propagates Through VLM Modalities",
-    "authors": ["Min Soo Kim", "Sarah Lee", "Advisor Name"],
+    "authors": [
+      "Min Soo Kim",
+      "Sarah Lee",
+      "Advisor Name"
+    ],
     "me": "Min Soo Kim",
     "venue": "ACL",
     "year": 2025,
@@ -34,7 +45,11 @@
   },
   {
     "title": "Grounded but Wrong: A Taxonomy of Hallucination Modes in Captioning Models",
-    "authors": ["Daehee Choi", "Min Soo Kim", "Advisor Name"],
+    "authors": [
+      "Daehee Choi",
+      "Min Soo Kim",
+      "Advisor Name"
+    ],
     "me": "Min Soo Kim",
     "venue": "EMNLP",
     "year": 2024,

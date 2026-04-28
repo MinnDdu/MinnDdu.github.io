@@ -1,20 +1,20 @@
 [
   {
-    "degree": "Ph.D. in Artificial Intelligence",
+    "degree": "MS/Ph.D. Integrated Program in Artificial Intelligence",
     "school": "Yonsei University",
-    "lab": "Trustworthy AI Lab",
-    "advisor": "Prof. Advisor Name",
-    "start": "2024",
+    "lab": "AI-ISL",
+    "advisor": "Prof. Albert No",
+    "start": "2026",
     "end": "Present",
     "location": "Seoul, KR"
   },
   {
     "degree": "B.S. in Computer Science",
-    "school": "Yonsei University",
-    "gpa": "4.12 / 4.30",
-    "honors": "Summa Cum Laude",
+    "school": "Stony Brook University",
+    "gpa": "3.80 / 4.00",
+    "honors": "Magna Cum Laude",
     "start": "2020",
     "end": "2024",
-    "location": "Seoul, KR"
+    "location": "Stony Brook, NY, USA"
   }
 ]
