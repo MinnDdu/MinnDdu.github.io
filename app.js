@@ -147,24 +147,28 @@ function Hero({ profile, photoPos }) {
         <img src={profile.image || "assets/profile.svg"} alt={profile.name} />
       </div>
       <div className="hero-main">
-        <h1>{profile.name}<span className="h1-cursor" aria-hidden="true" /></h1>
-        <p className="hero-meta">
-          {profile.role}<span className="sep">·</span>
-          {profile.affiliation}<span className="sep">·</span>
-          {profile.location}
-        </p>
-        <p className="hero-bio"><Mono text={profile.bio} /></p>
-        <p className="hero-interests">
-          <span className="muted">research</span>{" "}
-          {profile.interests.map((t, i) => (
-            <span key={t}>
-              <span className="interest">{t}</span>
-              {i < profile.interests.length - 1 && <span className="dot">·</span>}
-            </span>
-          ))}
-        </p>
-        <div className="hero-status" aria-hidden="true" style={{ display: "none" }}>
-          <Typed text={`status: ${status}`} />
+        <div className="hero-intro">
+          <h1>{profile.name}<span className="h1-cursor" aria-hidden="true" /></h1>
+          <p className="hero-meta">
+            {profile.role}<span className="sep">·</span>
+            {profile.affiliation}<span className="sep">·</span>
+            {profile.location}
+          </p>
+        </div>
+        <div className="hero-copy">
+          <p className="hero-bio"><Mono text={profile.bio} /></p>
+          <p className="hero-interests">
+            <span className="muted">research</span>{" "}
+            {profile.interests.map((t, i) => (
+              <span key={t}>
+                <span className="interest">{t}</span>
+                {i < profile.interests.length - 1 && <span className="dot">·</span>}
+              </span>
+            ))}
+          </p>
+          <div className="hero-status" aria-hidden="true" style={{ display: "none" }}>
+            <Typed text={`status: ${status}`} />
+          </div>
         </div>
       </div>
       <Fortune />

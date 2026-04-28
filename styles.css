@@ -779,11 +779,25 @@ img { max-width: 100%; display: block; }
     padding-top: 28px;
     padding-bottom: 32px;
   }
-  .hero-photo {
-    width: 156px;
+  .hero-main {
+    display: contents;
+  }
+  .hero-intro {
+    order: 1;
+  }
+  .hero-photo,
+  .hero[data-photo="left"] .hero-photo,
+  .hero:not([data-photo="left"]) .hero-photo {
+    width: 176px;
     aspect-ratio: 1/1;
-    order: -1;
-    justify-self: start;
+    order: 2;
+    justify-self: center;
+  }
+  .hero-copy {
+    order: 3;
+  }
+  .fortune {
+    order: 4;
   }
   .hero-main h1 { font-size: 26px; }
   .pub { grid-template-columns: 1fr; gap: 10px; }
