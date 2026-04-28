@@ -240,14 +240,14 @@ function PubItem({ p }) {
   const [open, setOpen] = useState(false);
   return (
     <article className="pub">
-      <div className="pub-thumb"><img src={p.thumbnail} alt="" /></div>
+      <div className={"pub-thumb" + (p.thumbnailFit === "contain" ? " contain" : "")}><img src={p.thumbnail} alt="" /></div>
       <div className="pub-body">
         <div className="pub-tags">
           <span className={"tag " + venueColorClass(p.venueColor)}>{p.venue} {p.year}</span>
           {p.tags?.map((t) => <span key={t} className="tag tag-accent">{t}</span>)}
           {p.equalContribution && <span className="tag tag-ghost">* equal contribution</span>}
         </div>
-        <h3 className="pub-title">{p.title}</h3>
+        <h3 className="pub-title">{md(p.title)}</h3>
         <Authors list={p.authors} me={p.me} />
         <div className="pub-actions">
           {p.links?.paper && <a href={p.links.paper}>[paper]</a>}
@@ -260,7 +260,7 @@ function PubItem({ p }) {
             </button>
           )}
         </div>
-        {open && p.abstract && <div className="pub-abstract">{p.abstract}</div>}
+        {open && p.abstract && <div className="pub-abstract">{md(p.abstract)}</div>}
       </div>
     </article>
   );
@@ -287,17 +287,17 @@ function EducationList({ items }) {
         <div className="entry" key={i}>
           <div className="entry-when">{e.start} — {e.end}</div>
           <div>
-            <h3 className="entry-title">{e.degree}</h3>
+            <h3 className="entry-title">{md(e.degree)}</h3>
             <p className="entry-sub">
-              {e.school}
-              {e.lab && <><span className="dot">·</span>{e.lab}</>}
-              {e.location && <><span className="dot">·</span>{e.location}</>}
+              {md(e.school)}
+              {e.lab && <><span className="dot">·</span>{md(e.lab)}</>}
+              {e.location && <><span className="dot">·</span>{md(e.location)}</>}
             </p>
             {(e.advisor || e.gpa || e.honors) && (
               <p className="entry-note">
-                {e.advisor && <>Advisor: {e.advisor}. </>}
-                {e.gpa && <>GPA: {e.gpa}. </>}
-                {e.honors && <>{e.honors}.</>}
+                {e.advisor && <>Advisor: {md(e.advisor)}. </>}
+                {e.gpa && <>GPA: {md(e.gpa)}. </>}
+                {e.honors && <>{md(e.honors)}.</>}
               </p>
             )}
           </div>
@@ -318,12 +318,12 @@ function ExperienceList({ items }) {
         <div className="entry" key={i}>
           <div className="entry-when">{e.start} — {e.end}</div>
           <div>
-            <h3 className="entry-title">{e.role}</h3>
+            <h3 className="entry-title">{md(e.role)}</h3>
             <p className="entry-sub">
-              {e.org}
-              {e.team && <><span className="dot">·</span>{e.team}</>}
+              {md(e.org)}
+              {e.team && <><span className="dot">·</span>{md(e.team)}</>}
             </p>
-            <p className="entry-note">{e.summary}</p>
+            <p className="entry-note">{md(e.summary)}</p>
           </div>
         </div>
       ))}
@@ -342,9 +342,9 @@ function AwardsList({ items }) {
         <div className="entry" key={i}>
           <div className="entry-when">{a.year}</div>
           <div>
-            <h3 className="entry-title">{a.title}</h3>
-            <p className="entry-sub">{a.issuer}</p>
-            {a.note && <p className="entry-note">{a.note}</p>}
+            <h3 className="entry-title">{md(a.title)}</h3>
+            <p className="entry-sub">{md(a.issuer)}</p>
+            {a.note && <p className="entry-note">{md(a.note)}</p>}
           </div>
         </div>
       ))}
@@ -379,8 +379,8 @@ function MiscList({ items }) {
       <div className="misc entries">
         {items.map((m, i) => (
           <div className="misc-row" key={i}>
-            <span className="misc-label">{m.label}</span>
-            <span className="misc-value">{m.value}</span>
+            <span className="misc-label">{md(m.label)}</span>
+            <span className="misc-value">{md(m.value)}</span>
           </div>
         ))}
       </div>
