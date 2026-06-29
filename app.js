@@ -1,5 +1,5 @@
 /* global React, ReactDOM */
-const { useState, useEffect, useRef } = React;
+const { useState, useEffect } = React;
 
 /* ---------- helpers ---------- */
 const venueColorClass = (c) => `tag-${c || "ghost"}`;
@@ -94,7 +94,7 @@ function Nav({ profile, theme, onToggleTheme }) {
           {SECTIONS.map((s) => (
             <a key={s.id} href={`#${s.id}`} className="nav-link">{s.label}</a>
           ))}
-          <button className="theme-toggle" onClick={onToggleTheme} title="Toggle theme (t)" aria-label="Toggle theme">
+          <button className="theme-toggle" onClick={onToggleTheme} title="Toggle theme" aria-label="Toggle theme">
             <span className="t-full">:theme {theme}</span>
             <span className="t-short">{theme === "light" ? "◐" : "◑"}</span>
           </button>
@@ -239,9 +239,22 @@ function Authors({ list, me }) {
   );
 }
 
+function isArxivUrl(url) {
+  if (!url) return false;
+  try {
+    return new URL(url).hostname.replace(/^www\./, "") === "arxiv.org";
+  } catch {
+    return false;
+  }
+}
+
 /* ---------- Publication item ---------- */
 function PubItem({ p }) {
   const [open, setOpen] = useState(false);
+  const paperLink = p.links?.paper;
+  const arxivLink = p.links?.arxiv || (isArxivUrl(paperLink) ? paperLink : null);
+  const nonArxivPaperLink = paperLink && paperLink !== arxivLink ? paperLink : null;
+
   return (
     <article className="pub">
       <div className="pub-thumb"><img src={p.thumbnail} alt="" /></div>
@@ -254,7 +267,8 @@ function PubItem({ p }) {
         <h3 className="pub-title">{md(p.title)}</h3>
         <Authors list={p.authors} me={p.me} />
         <div className="pub-actions">
-          {p.links?.paper && <a href={p.links.paper}>[paper]</a>}
+          {arxivLink && <a href={arxivLink}>[arXiv]</a>}
+          {nonArxivPaperLink && <a href={nonArxivPaperLink}>[paper]</a>}
           {p.links?.code && <a href={p.links.code}>[code]</a>}
           {p.links?.project && <a href={p.links.project}>[project]</a>}
           {p.links?.bibtex && <a href={p.links.bibtex}>[bibtex]</a>}
@@ -417,64 +431,19 @@ function Contact({ profile }) {
       </div>
       <div className="contact-cta">
         <a href={profile.links.email}>✉ get in touch</a>
+        {/* Re-enable once the official CV is ready.
         <a className="secondary" href={profile.links.cv} target="_blank" rel="noreferrer">↓ CV (pdf)</a>
+        */}
       </div>
     </section>
   );
 }
 
-/* ---------- Help modal (?) ---------- */
-function HelpModal({ open, onClose, profile }) {
-  useEffect(() => {
-    if (!open) return;
-    const onKey = (e) => { if (e.key === "Escape") onClose(); };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open, onClose]);
-  if (!open) return null;
-  const rows = [
-    ["t",       "toggle theme"],
-    ["g h",     "go to top (about)"],
-    ["g p",     "go to publications"],
-    ["g e",     "go to experience"],
-    ["g a",     "go to awards"],
-    ["g n",     "go to news"],
-    ["g c",     "go to contact"],
-    ["?",       "this help"],
-    ["esc",     "close"],
-  ];
-  return (
-    <div className="help-backdrop" onClick={onClose}>
-      <div className="help-modal" onClick={(e) => e.stopPropagation()}>
-        <div className="help-head">
-          <span className="prompt">$</span> man {profile?.handle || profile?.name || "MinSoo"}
-          <button className="help-close" onClick={onClose} aria-label="Close">×</button>
-        </div>
-        <div className="help-body">
-          {rows.map(([k, v]) => (
-            <div className="help-row" key={k}>
-              <span className="help-keys">{k.split(" ").map((part, i) => (
-                <span key={i}><span className="kbd">{part}</span>{i < k.split(" ").length - 1 ? " " : ""}</span>
-              ))}</span>
-              <span className="help-desc">{v}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ---------- Footer ---------- */
-function Footer({ profile, onHelp }) {
+function Footer({ profile }) {
   return (
     <footer className="foot">
       <span>© {new Date().getFullYear()} {profile?.name || "Min Soo Kim"} — built with html, css, a little js</span>
-      <span className="kbhint">
-        <button className="kbd-btn" onClick={onHelp} title="Show shortcuts (?)">
-          press <span className="kbd">?</span> for shortcuts
-        </button>
-      </span>
     </footer>
   );
 }
@@ -528,8 +497,6 @@ function App() {
     } catch (_) {}
     return TWEAK_DEFAULTS.photoPos || "right";
   });
-  const [help, setHelp] = useState(false);
-
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     try { localStorage.setItem("theme", theme); } catch (_) {}
@@ -541,26 +508,6 @@ function App() {
   }, [photoPos]);
 
   const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"));
-
-  useEffect(() => {
-    let waitG = false, gTimer = null;
-    const onKey = (e) => {
-      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key === "?" || (e.key === "/" && e.shiftKey)) { e.preventDefault(); setHelp((v) => !v); return; }
-      if (e.key === "t") { toggleTheme(); return; }
-      if (e.key === "g") { waitG = true; clearTimeout(gTimer); gTimer = setTimeout(() => waitG = false, 900); return; }
-      if (waitG) {
-        const map = { p: "publications", n: "news", c: "contact", e: "experience", a: "awards", h: "about" };
-        if (map[e.key]) {
-          waitG = false;
-          document.getElementById(map[e.key])?.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, []);
 
   return (
     <>
@@ -576,9 +523,8 @@ function App() {
         <AwardsList     items={awards} />
         <MiscList       items={misc} />
         <Contact        profile={profile} />
-        <Footer profile={profile} onHelp={() => setHelp(true)} />
+        <Footer profile={profile} />
       </main>
-      <HelpModal open={help} onClose={() => setHelp(false)} profile={profile} />
       <TweaksRoot theme={theme} setTheme={setTheme} photoPos={photoPos} setPhotoPos={setPhotoPos} />
     </>
   );

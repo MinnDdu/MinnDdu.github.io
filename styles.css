@@ -758,19 +758,6 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.kbhint { display: flex; gap: 10px; flex-wrap: wrap; }
-.kbd {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  background: var(--bg-sunken);
-  border: 1px solid var(--border);
-  border-bottom-width: 2px;
-  padding: 1px 5px;
-  border-radius: 3px;
-  color: var(--fg-muted);
-  line-height: 1.2;
-}
 
 /* ===== Responsive ===== */
 @media (max-width: 720px) {
@@ -813,73 +800,6 @@ img { max-width: 100%; display: block; }
   .news-row { grid-template-columns: 1fr; gap: 2px; padding: 8px 14px; }
   .foot { flex-direction: column; gap: 8px; }
 }
-
-/* ===== Help modal ===== */
-.help-backdrop {
-  position: fixed; inset: 0;
-  background: color-mix(in oklab, var(--bg) 60%, transparent);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  animation: fadeIn .15s ease-out;
-}
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.help-modal {
-  background: var(--bg-elev);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--r);
-  width: 100%;
-  max-width: 380px;
-  font-family: var(--font-mono);
-  font-size: 13px;
-  box-shadow: 0 20px 60px -20px rgba(0,0,0,0.25);
-}
-.help-head {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--rule);
-  color: var(--fg);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 500;
-}
-.help-head .prompt { color: var(--lavender-ink); margin-right: 4px; }
-.help-close {
-  margin-left: auto;
-  background: none;
-  border: none;
-  color: var(--fg-muted);
-  font-size: 18px;
-  cursor: pointer;
-  line-height: 1;
-  padding: 0 4px;
-}
-.help-close:hover { color: var(--fg); }
-.help-body { padding: 8px 0; }
-.help-row {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 14px;
-  padding: 6px 14px;
-  align-items: center;
-}
-.help-keys { color: var(--fg-muted); }
-.help-desc { color: var(--fg); font-family: var(--font-sans); font-size: 13px; }
-
-.kbd-btn {
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: var(--fg-faint);
-  cursor: pointer;
-  padding: 0;
-}
-.kbd-btn:hover { color: var(--fg-muted); }
 
 /* ===== Print (so CV PDF download path remains useful) ===== */
 @media print {

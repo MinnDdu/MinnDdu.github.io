@@ -11,7 +11,7 @@
   "location": "",
   "email": "markkim1@yonsei.ac.kr",
   "tagline": "Building safer, more grounded language and multimodal models.",
-  "bio": "Hi! I am a graduate student at Yonsei University, advised by Prof. Albert No in AI-ISL (AI and Information Systems Lab). I work on `language models`, `multimodal learning`, and `AI safety`. Broadly, I am interested in language models and their applications, from large language models and vision-language models to newer generative paradigms such as diffusion-based language models. My research explores how these models reason, generalize, and sometimes fail. Ultimately, I hope to contribute to AI systems that are capable, robust, interpretable, and trustworthy in real-world settings.",
+  "bio": "Hi! I am a graduate student at Yonsei University, advised by Prof. Albert No in AI-ISL (AI and Information Systems Lab). I work on `language models`, `multimodal learning`, and `AI safety`. Broadly, I am interested in language models and their applications, from large language models to vision-language models and other interactive AI systems. My research explores how these models reason, generalize, and sometimes fail, and I have recently been growing more interested in safety, alignment, and interpretability. Ultimately, I hope to contribute to AI systems that are capable, reliable, and trustworthy in real-world settings.",
   "currently": [
     "Studying alignment of multimodal LLMs under distribution shift",
     "Building red-teaming tools for VLMs",
