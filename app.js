@@ -151,8 +151,8 @@ function Hero({ profile, photoPos }) {
           <h1>{profile.name}<span className="h1-cursor" aria-hidden="true" /></h1>
           <p className="hero-meta">
             {profile.role}<span className="sep">·</span>
-            {profile.affiliation}<span className="sep">·</span>
-            {profile.location}
+            {profile.affiliation}
+            {/* {profile.location} */}
           </p>
         </div>
         <div className="hero-copy">
@@ -298,11 +298,11 @@ function EducationList({ items }) {
               {e.location && <><span className="dot">·</span>{md(e.location)}</>}
             </p>
             {(e.advisor || e.gpa || e.honors) && (
-              <p className="entry-note">
-                {e.advisor && <>Advisor: {md(e.advisor)}. </>}
-                {e.gpa && <>GPA: {md(e.gpa)}. </>}
-                {e.honors && <>{md(e.honors)}.</>}
-              </p>
+              <div className="entry-note">
+                {e.advisor && <div>Advisor: {md(e.advisor)}</div>}
+                {e.gpa && <div>GPA: {md(e.gpa)}</div>}
+                {e.honors && <div>{md(e.honors)}</div>}
+              </div>
             )}
           </div>
         </div>
