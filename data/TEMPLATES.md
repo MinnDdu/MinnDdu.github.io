@@ -80,6 +80,14 @@ Array of published or accepted papers.
 ]
 ```
 
+`venueColor`에 사용할 수 있는 값:
+
+- Cool: `mint`, `teal`, `sky`, `lavender`, `lilac`
+- Warm: `rose`, `coral`, `amber`
+- Neutral: `ghost`
+
+학회마다 색을 하나 정해 계속 재사용하면 목록을 빠르게 구분할 수 있습니다.
+
 Notes:
 - Add `*`, `†`, or `‡` directly in an author name if needed, e.g. `"Min Soo Kim*"`.
 - `me` is used to bold your name in the author list.

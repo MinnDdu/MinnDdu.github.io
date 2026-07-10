@@ -1,4 +1,26 @@
 [
+    {
+    "title": "v1: Learning to Point Visual Tokens for Multimodal Grounded Reasoning",
+    "authors": [
+      "Jiwan Chung*",
+      "Junhyeok Kim*",
+      "Siyeol Kim",
+      "Jaeyoung Lee",
+      "Min Soo Kim",
+      "Youngjae Yu"
+    ],
+    "me": "Min Soo Kim",
+    "venue": "COLM",
+    "year": 2026,
+    "venueColor": "lavender",
+    "tags": [
+    ],
+    "thumbnail": "assets/v1.png",
+    "links": {
+      "paper": "https://arxiv.org/abs/2505.18842"
+    },
+    "abstract": ""
+  },
   {
     "title": "Do MLLMs Capture How Interfaces Guide User Behavior? A Benchmark for Multimodal UI/UX Design Understanding",
     "authors": [

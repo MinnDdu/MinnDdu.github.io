@@ -21,28 +21,5 @@
       "paper": "https://arxiv.org/abs/2605.15672"
     },
     "abstract": ""
-  },
-  {
-    "title": "v1: Learning to Point Visual Tokens for Multimodal Grounded Reasoning",
-    "authors": [
-      "Jiwan Chung*",
-      "Junhyeok Kim*",
-      "Siyeol Kim",
-      "Jaeyoung Lee",
-      "Min Soo Kim",
-      "Youngjae Yu"
-    ],
-    "me": "Min Soo Kim",
-    "venue": "arXiv",
-    "year": 2026,
-    "venueColor": "ghost",
-    "tags": [
-      "Under review"
-    ],
-    "thumbnail": "assets/v1.png",
-    "links": {
-      "paper": "https://arxiv.org/abs/2505.18842"
-    },
-    "abstract": ""
   }
 ]

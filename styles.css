@@ -32,6 +32,23 @@
   --lilac-ink:   #7B428C;
   --lilac-bg:    #F4EAF6;
 
+  /* Extra venue colors — spaced around the hue wheel for easy distinction */
+  --rose:        #E8B8C4;
+  --rose-ink:    #8B3650;
+  --rose-bg:     #F9EAEF;
+
+  --coral:       #EDB9A4;
+  --coral-ink:   #8D4529;
+  --coral-bg:    #FAECE6;
+
+  --amber:       #E5CE8C;
+  --amber-ink:   #74570A;
+  --amber-bg:    #F8F1DC;
+
+  --teal:        #9ACFCB;
+  --teal-ink:    #236A66;
+  --teal-bg:     #E5F3F2;
+
   --cursor:      #5C459A;          /* lavender ink for caret */
   --link:        #2C5A85;
   --link-hover:  #1F4A75;
@@ -76,6 +93,22 @@
   --lilac:       #4A3550;
   --lilac-ink:   #E0BFE6;
   --lilac-bg:    #271A2A;
+
+  --rose:        #57313D;
+  --rose-ink:    #F0B3C3;
+  --rose-bg:     #2B1920;
+
+  --coral:       #59372B;
+  --coral-ink:   #F0B59E;
+  --coral-bg:    #2B1D18;
+
+  --amber:       #55451E;
+  --amber-ink:   #E8CF83;
+  --amber-bg:    #292316;
+
+  --teal:        #244B49;
+  --teal-ink:    #91D4CF;
+  --teal-bg:     #142725;
 
   --cursor:      #C5B4EC;
   --link:        #9CC4E8;
@@ -495,6 +528,10 @@ img { max-width: 100%; display: block; }
 .tag-sky      { background: var(--sky-bg);      color: var(--sky-ink);      border-color: var(--sky); }
 .tag-lavender { background: var(--lavender-bg); color: var(--lavender-ink); border-color: var(--lavender); }
 .tag-lilac    { background: var(--lilac-bg);    color: var(--lilac-ink);    border-color: var(--lilac); }
+.tag-rose     { background: var(--rose-bg);     color: var(--rose-ink);     border-color: var(--rose); }
+.tag-coral    { background: var(--coral-bg);    color: var(--coral-ink);    border-color: var(--coral); }
+.tag-amber    { background: var(--amber-bg);    color: var(--amber-ink);    border-color: var(--amber); }
+.tag-teal     { background: var(--teal-bg);     color: var(--teal-ink);     border-color: var(--teal); }
 .tag-ghost    { background: var(--bg-sunken); color: var(--fg-muted); border-color: var(--border); }
 .tag-accent   { background: var(--lavender-bg); color: var(--lavender-ink); border-color: var(--lavender); }
 
